@@ -1,23 +1,37 @@
-# LudiLearn — Module 0 (Base qui démarre) — Fix 2
+# LudiLearn — Module 1 (DB & Prisma — SQLite)
 
 ## Prérequis
 - Node.js **20.x**
-- npm (fourni avec Node)
+- npm
 
 ## Commandes à exécuter
 ```bash
 npm install
+copy .env.example .env   # Windows
+# macOS/Linux: cp .env.example .env
+
+npx prisma migrate dev --name init
+# (optionnel) Ouvrir Prisma Studio: npx prisma studio
+
+# Seed (crée admin@example.com)
+npx prisma db seed
+
 npm run dev
 ```
 
 ## URL à ouvrir
-- http://localhost:3000
+- Accueil : http://localhost:3000
+- Test DB : http://localhost:3000/users
 
 ## Vérifications
-- La page d’accueil affiche **“LudiLearn démarre ✅”**.
-- Aucune variable d’environnement n’est requise.
-- Le hot-reload fonctionne quand vous éditez `src/app/page.tsx`.
+- La migration s'exécute sans erreur.
+- Le seed affiche « Seed complete. Users in DB: 1 ».
+- Sur `/users`, vous voyez **Nombre d’utilisateurs en base : 1**.
 
-## (Facultatif) Si le port 3000 est occupé
-- Windows (PowerShell) : `set PORT=3001 && npm run dev`
-- macOS/Linux : `PORT=3001 npm run dev`
+## Notes
+- Pas d'enums Prisma, pas de `@db.Text` (compatibles SQLite).
+- Alias TS `@/*` opérationnel (voir `src/lib/prisma.ts`).
+- `.env.example` inclus.
+
+---
+Réponds **OK** quand tu vois **Nombre d’utilisateurs en base : 1** sur `/users`.
