@@ -2,9 +2,9 @@
 on:
   push:
     branches: ["main"]
-  workflow_dispatch: {}        # lancer à la main
+  workflow_dispatch: {}
   schedule:
-    - cron: "*/30 * * * *"     # toutes les 30 min (optionnel)
+    - cron: "*/30 * * * *"   # toutes les 30 min
 
 permissions:
   contents: write
@@ -18,6 +18,13 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
+      - name: Install & Test
+        run: |
+          if [ -f package.json ]; then
+            npm ci || echo "install_failed" > install.flag
+            npm test || echo "tests_failed" > tests.flag
+          fi
+
       - name: Update STATUS.md
         run: |
           mkdir -p dev
@@ -27,9 +34,10 @@ jobs:
           git log -1 --pretty=format:"- %h %s (%an, %ar)" >> dev/STATUS.md
           echo "" >> dev/STATUS.md
           echo "## CI & Tests" >> dev/STATUS.md
-          echo "- non implemente pour l'instant" >> dev/STATUS.md
+          if [ -f install.flag ]; then echo "- ❌ npm ci a échoué" >> dev/STATUS.md; else echo "- ✅ npm ci OK" >> dev/STATUS.md; fi
+          if [ -f tests.flag ];  then echo "- ❌ npm test a échoué" >> dev/STATUS.md; else echo "- ✅ npm test OK (ou non défini)" >> dev/STATUS.md; fi
           echo "" >> dev/STATUS.md
-          echo "## Fichiers modifies (dernier commit)" >> dev/STATUS.md
+          echo "## Fichiers modifiés (dernier commit)" >> dev/STATUS.md
           git diff-tree --no-commit-id --name-only -r HEAD >> dev/STATUS.md
           echo "" >> dev/STATUS.md
           echo "---" >> dev/STATUS.md
