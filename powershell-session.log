@@ -12235,3 +12235,28 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
 
 PS C:\Apps\Ludilearn> notepad $PROFILE
 PS C:\Apps\Ludilearn> lg "npm run build"
+ ✓ Finished writing to disk in 15ms
+ ✓ Compiled successfully in 1085ms
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (5/5)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                         Size  First Load JS
+┌ ○ /                                0 B         113 kB
+└ ○ /_not-found                      0 B         113 kB
++ First Load JS shared by all     117 kB
+  ├ chunks/31bc4565ab341ca3.js   75.3 kB
+  ├ chunks/5564f493499345f1.js   24.1 kB
+  └ other shared chunks (total)  17.2 kB
+
+
+○  (Static)  prerendered as static content
+git : Already on 'logs'
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:14 : 5
++     git -C $global:LLLogsRepo switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
