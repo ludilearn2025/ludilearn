@@ -26,3 +26,16 @@ Transcription démarrée, le fichier de sortie est .\powershell-session.log
 PS C:\Apps\Ludilearn> echo "TEST transcription OK"
 TEST transcription OK
 PS C:\Apps\Ludilearn> clear
+PS C:\Apps\Ludilearn> Write-Output "Nouvelle ligne de test"
+Nouvelle ligne de test
+PS C:\Apps\Ludilearn> Get-Content .\powershell-session.log -Tail 10
+TEST transcription OK
+PS C:\Apps\Ludilearn> Get-Content .\powershell-session.log -Tail 5
+SerializationVersion: 1.1.0.1
+**********************
+Transcription démarrée, le fichier de sortie est .\powershell-session.log
+PS C:\Apps\Ludilearn> echo "TEST transcription OK"
+TEST transcription OK
+PS C:\Apps\Ludilearn> clear
+PS C:\Apps\Ludilearn> Write-Output "Nouvelle ligne de test"
+Nouvelle ligne de test
