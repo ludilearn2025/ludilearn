@@ -1,14 +1,13 @@
-﻿# Dev Status
+# Dev Status
 
 ## Dernier commit
-- (à compléter manuellement ou via action plus tard)
-
+- d6cfa38 ci: enable manual dispatch + schedule (ludilearn2025, 3 minutes ago)
 ## CI & Tests
-- En attente…
+- non implemente pour l'instant
 
-## Fichiers modifiés (dernier commit)
-- (à compléter manuellement ou via action plus tard)
+## Fichiers modifies (dernier commit)
+.github/workflows/dev-status.yml
 
 ---
-📝 Notes rapides :
-- …
+Notes rapides :
+- ...
