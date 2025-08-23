@@ -2,6 +2,9 @@
 on:
   push:
     branches: ["main"]
+  workflow_dispatch: {}        # lancer à la main
+  schedule:
+    - cron: "*/30 * * * *"     # toutes les 30 min (optionnel)
 
 permissions:
   contents: write
