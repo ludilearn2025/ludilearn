@@ -12263,3 +12263,13 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
 
 
 
+PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn-logs
+PS C:\Apps\Ludilearn-logs> git switch logs
+
+PS C:\Apps\Ludilearn-logs> if (-not (Test-Path .\powershell-session.log)) { New-Item powershell-session.log -ItemType File | Out-Null }
+PS C:\Apps\Ludilearn-logs> git add powershell-session.log
+
+PS C:\Apps\Ludilearn-logs> git commit -m "chore(log): init" 2>$null
+
+PS C:\Apps\Ludilearn-logs> git push
+
