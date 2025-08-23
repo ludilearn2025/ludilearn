@@ -1,6 +1,6 @@
 ﻿**********************
 Début de la transcription Windows PowerShell
-Heure de début : 20250823160838
+Heure de début : 20250823165114
 Nom d'utilisateur : STATION_PERREK\johnd
 Utilisateur runAs :  STATION_PERREK\johnd
 Nom de la configuration : 
@@ -17,438 +17,130 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git add powershell-session.log
+PS C:\Apps\Ludilearn> dir C:\Apps\Ludilearn\module-1
 
-PS C:\Apps\Ludilearn> git commit -m "chore: update powershell session log"
 
-PS C:\Apps\Ludilearn> git push origin module-1-dev
+    Répertoire : C:\Apps\Ludilearn\module-1
 
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> Start-Transcript -Path "C:\Apps\Ludilearn\powershell-session.log" -Append
-Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git status
 
-PS C:\Apps\Ludilearn> Stop-Transcript
-Transcription arrêtée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> notepad C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git add powershell-session.log
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        23.08.2025     16:04                .next
+d-----        23.08.2025     16:04                node_modules
+d-----        23.08.2025     16:28                prisma
+-a----        21.08.2025     03:42             55 .env
+-a----        21.08.2025     03:42             55 .env.example
 
-PS C:\Apps\Ludilearn> git commit -m "chore: test transcript log"
-
-PS C:\Apps\Ludilearn> git push origin module-1-dev
-
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> Start-Transcript -Path "C:\Apps\Ludilearn\powershell-session.log" -Append
-Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git status
-
-PS C:\Apps\Ludilearn> git add powershell-session.log
-
-PS C:\Apps\Ludilearn> git commit -m "chore: add transcript log test"
-
-PS C:\Apps\Ludilearn> git push -u origin module-1-dev
-
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> git remote add origin https://github.com/ludilearn2025/ludilearn.git
-
-PS C:\Apps\Ludilearn> git remote -v
-
-PS C:\Apps\Ludilearn> Add-Content .gitignore "`r`n**/prisma/**/*.db`r`n**/prisma/*-journal"
-PS C:\Apps\Ludilearn> git rm --cached module-1/prisma/prisma/dev.db
-
-PS C:\Apps\Ludilearn> git add .gitignore
-
-PS C:\Apps\Ludilearn> git commit -m "chore: ignore local prisma db"
-
-PS C:\Apps\Ludilearn> git push -u origin module-1-dev
-
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> Add-Content .gitignore "`r`n_archives/"
-PS C:\Apps\Ludilearn> git rm -r --cached _archives
-
-PS C:\Apps\Ludilearn> git commit -m "chore: stop tracking _archives"
-
-PS C:\Apps\Ludilearn> git filter-branch --force --index-filter "git rm -r --cached --ignore-unmatch _archives" --prune-empty --tag-name-filter cat -- --all
 
 PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> git add .gitignore powershell-session.log
-warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
-PS C:\Apps\Ludilearn> git commit -m "chore: update ignore + log"
-[module-1-dev 9f148d3] chore: update ignore + log
- 2 files changed, 31 insertions(+)
-PS C:\Apps\Ludilearn> setx FILTER_BRANCH_SQUELCH_WARNING 1
+PS C:\Apps\Ludilearn> Remove-Item -Recurse -Force C:\Apps\Ludilearn\module-1
+PS C:\Apps\Ludilearn> npx create-next-app@latest C:\Apps\Ludilearn\module-1 --ts --eslint --tailwind --src-dir --app --no-import-alias
+npm ERR! code ENOENT
+npm ERR! syscall lstat
+npm ERR! path C:\Users\johnd\AppData\Roaming\npm
+npm ERR! errno -4058
+npm ERR! enoent ENOENT: no such file or directory, lstat 'C:\Users\johnd\AppData\Roaming\npm'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent
 
-RÉUSSITE : la valeur spécifiée a été enregistrée.
-PS C:\Apps\Ludilearn> git filter-branch --force --index-filter "git rm -r --cached --ignore-unmatch _archives" --prune-empty --tag-name-filter cat -- --all
-WARNING: git-filter-branch has a glut of gotchas generating mangled history
-         rewrites.  Hit Ctrl-C before proceeding to abort, then use an
-         alternative filtering tool such as 'git filter-repo'
-         (https://github.com/newren/git-filter-repo/) instead.  See the
-         filter-branch manual page for more details; to squelch this warning,
-         set FILTER_BRANCH_SQUELCH_WARNING=1.
-Proceeding with filter-branch...
+npm ERR! A complete log of this run can be found in: C:\Users\johnd\AppData\Local\npm-cache\_logs\2025-08-23T14_52_37_882Z-debug-0.log
+PS C:\Apps\Ludilearn> ENOENT: no such file or directory, lstat 'C:\Users\johnd\AppData\Roaming\npm'
+ENOENT: : Le terme «ENOENT:» n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme 
+exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct 
+et réessayez.
+Au caractère Ligne:1 : 1
++ ENOENT: no such file or directory, lstat 'C:\Users\johnd\AppData\Roam ...
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ENOENT::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ENOENT: : Le terme «ENOENT:» n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme exécutable.
+Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.
+Au caractère Ligne:1 : 1
++ ENOENT: no such file or directory, lstat 'C:\Users\johnd\AppData\Roam ...
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (ENOENT::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
 
-Cannot rewrite branches: You have unstaged changes.
-PS C:\Apps\Ludilearn> git for-each-ref --format="%(refname)" refs/original/ | % { git update-ref -d $_ }
-PS C:\Apps\Ludilearn> git reflog expire --expire=now --all
+PS C:\Apps\Ludilearn> mkdir C:\Users\johnd\AppData\Roaming\npm -Force
 
-PS C:\Apps\Ludilearn> git gc --prune=now --aggressive
-Enumerating objects: 161, done.
-Counting objects: 100% (161/161), done.
-Delta compression using up to 24 threads
-Compressing objects: 100% (135/135), done.
-Writing objects: 100% (161/161), done.
-Total 161 (delta 31), reused 0 (delta 0), pack-reused 0 (from 0)
-PS C:\Apps\Ludilearn> git push -u origin module-1-dev --force
-Total 161 (delta 31), reused 161 (delta 31), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (31/31), done.
-remote: error: Trace: 231c88e14a298e926d09076ae98a9c1cdf7996e04d685e4ce4d89687de98a5fb
-remote: error: See https://gh.io/lfs for more information.
-remote: error: File _archives/ludilearn-module-3 (2).zip is 161.88 MB; this exceeds GitHub's file size limit of 100.00 MB
-remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
-To https://github.com/ludilearn2025/ludilearn.git
- ! [remote rejected] module-1-dev -> module-1-dev (pre-receive hook declined)
-error: failed to push some refs to 'https://github.com/ludilearn2025/ludilearn.git'
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> # arrêter le transcript pour éviter des modifs pendant la purge
-PS C:\Apps\Ludilearn> $trans = (Get-Variable -Name TranscriptEnabled -Scope Global -ErrorAction SilentlyContinue)
-PS C:\Apps\Ludilearn> Stop-Transcript 2>$null
-Transcription arrêtée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> # déplacer entièrement _archives hors du repo (sécurité)
-PS C:\Apps\Ludilearn> if (Test-Path .\_archives) { Move-Item .\_archives C:\Apps\Ludilearn._archives_offrepo -Force }
-PS C:\Apps\Ludilearn> # s'assurer que _archives est ignoré
-PS C:\Apps\Ludilearn> Add-Content .gitignore "`r`n_archives/"
-PS C:\Apps\Ludilearn> git add -A
-warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
-PS C:\Apps\Ludilearn> git commit -m "chore: move _archives out and ignore"
-[module-1-dev 6e9dd4d] chore: move _archives out and ignore
- 2 files changed, 46 insertions(+)
-PS C:\Apps\Ludilearn> git status
-On branch module-1-dev
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   powershell-session.log
 
-no changes added to commit (use "git add" and/or "git commit -a")
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> setx FILTER_BRANCH_SQUELCH_WARNING 1
+    Répertoire : C:\Users\johnd\AppData\Roaming
 
-RÉUSSITE : la valeur spécifiée a été enregistrée.
-PS C:\Apps\Ludilearn> git status
-On branch module-1-dev
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   powershell-session.log
 
-no changes added to commit (use "git add" and/or "git commit -a")
-**********************
-Début de la transcription Windows PowerShell
-Heure de début : 20250823162233
-Nom d'utilisateur : STATION_PERREK\johnd
-Utilisateur runAs :  STATION_PERREK\johnd
-Nom de la configuration : 
-Ordinateur : STATION_PERREK (Microsoft Windows NT 10.0.26100.0)
-Application hôte : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-ID de processus : 19028
-PSVersion: 5.1.26100.4768
-PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.4768
-BuildVersion: 10.0.26100.4768
-CLRVersion: 4.0.30319.42000
-WSManStackVersion: 3.0
-PSRemotingProtocolVersion: 2.3
-SerializationVersion: 1.1.0.1
-**********************
-Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git add powershell-session.log
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        23.08.2025     16:52                npm
 
-PS C:\Apps\Ludilearn> git commit -m "chore: session log after history purge"
-On branch module-1-dev
-Your branch is up to date with 'origin/module-1-dev'.
 
-nothing to commit, working tree clean
-PS C:\Apps\Ludilearn> git push
-Everything up-to-date
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> git subtree split --prefix=module-1 -b module-1
-fatal: branch 'module-1' is not an ancestor of commit '52629de73dedefc54e96810c00b2f2880dec1e6c'.
-PS C:\Apps\Ludilearn> git checkout module-1
-Unlink of file 'powershell-session.log' failed. Should I try again? (y/n) warning: unable to unlink 'powershell-session.log': Invalid argumen
-t
-Updating files: 100% (3/3)
-PS C:\Apps\Ludilearn> Erreur de terminaison () : « Le pipeline a été arrêté. »
+PS C:\Apps\Ludilearn> mkdir C:\Users\johnd\AppData\Roaming\npm-cache -Force
+
+
+    Répertoire : C:\Users\johnd\AppData\Roaming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        23.08.2025     16:52                npm-cache
+
+
+PS C:\Apps\Ludilearn> npx create-next-app@latest C:\Apps\Ludilearn\module-1 --ts --eslint --tailwind --src-dir --app --no-import-alias
+
+PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn\module-1
+PS C:\Apps\Ludilearn\module-1> npm run build
+
+PS C:\Apps\Ludilearn\module-1> npm run build
+
+PS C:\Apps\Ludilearn\module-1> clear
+PS C:\Apps\Ludilearn\module-1> cd C:\Apps\Ludilearn\module-1
+PS C:\Apps\Ludilearn\module-1> npm run dev
+
+> module-1@0.1.0 dev
+> next dev --turbopack
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Apps\Ludilearn\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles:
+   * C:\Apps\Ludilearn\module-1\package-lock.json
+
+   ▲ Next.js 15.5.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.221:3000
+
+ ✓ Starting...
+ ✓ Ready in 872ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.6s
+ GET / 200 in 3134ms
+ ✓ Compiled /favicon.ico in 173ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 498ms
+
+Terminer le programme de commandes (O/N) ? o
+PS C:\Apps\Ludilearn\module-1> Erreur de terminaison () : « Le pipeline a été arrêté. »
 >> Erreur de terminaison () : « Le pipeline a été arrêté. »
-PS C:\Apps\Ludilearn> git ls-tree --name-only -r HEAD
-module-2/pages/api/auth/[...nextauth].ts
-module-2/pages/api/register.ts
-module-2/postcss.config.js
-module-2/prisma/migrations/20250823005722_auth_init/migration.sql
-module-2/prisma/migrations/migration_lock.toml
-module-2/prisma/prisma/dev.db
-module-2/prisma/schema.prisma
-module-2/prisma/seed.ts
-module-2/src/app/dashboard/page.tsx
-module-2/src/app/globals.css
-module-2/src/app/layout.tsx
-module-2/src/app/login/page.tsx
-module-2/src/app/page.tsx
-module-2/src/app/register/page.tsx
-module-2/src/lib/auth.ts
-module-2/src/lib/prisma.ts
-module-2/tailwind.config.js
-module-2/tsconfig.json
-module-3/next-env.d.ts
-module-3/next.config.mjs
-module-3/package-lock.json
-module-3/package.json
-module-3/src/app/[locale]/layout.tsx
-module-3/src/app/[locale]/page.tsx
-module-3/src/components/LangSwitch.tsx
-module-3/src/i18n.ts
-module-3/src/messages/en.json
-module-3/src/messages/fr.json
-module-3/tsconfig.json
-patches/README-PATCH.txt
-patches/src/lib/auth.ts
-powershell-session.log
-PS C:\Apps\Ludilearn> Stop-Transcript 2>$null
-**********************
-Fin de la transcription Windows PowerShell
-Heure de fin : 20250823162421
-**********************
-**********************
-Début de la transcription Windows PowerShell
-Heure de début : 20250823162552
-Nom d'utilisateur : STATION_PERREK\johnd
-Utilisateur runAs :  STATION_PERREK\johnd
-Nom de la configuration : 
-Ordinateur : STATION_PERREK (Microsoft Windows NT 10.0.26100.0)
-Application hôte : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-ID de processus : 19028
-PSVersion: 5.1.26100.4768
-PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.4768
-BuildVersion: 10.0.26100.4768
-CLRVersion: 4.0.30319.42000
-WSManStackVersion: 3.0
-PSRemotingProtocolVersion: 2.3
-SerializationVersion: 1.1.0.1
-**********************
+PS C:\Apps\Ludilearn\module-1> notepad .\src\app\page.tsx
+PS C:\Apps\Ludilearn\module-1> npm run dev
+ Detected additional lockfiles:
+   * C:\Apps\Ludilearn\module-1\package-lock.json
+
+   ▲ Next.js 15.5.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.221:3000
+
+ ✓ Starting...
+ ✓ Ready in 873ms
+
+Terminer le programme de commandes (O/N) ? o
+PS C:\Apps\Ludilearn\module-1> Erreur de terminaison () : « Le pipeline a été arrêté. »
+>> Erreur de terminaison () : « Le pipeline a été arrêté. »
+PS C:\Apps\Ludilearn\module-1> . $PROFILE
 Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> git add powershell-session.log
-
-PS C:\Apps\Ludilearn> git commit -m "chore: resume transcript"
-On branch module-1-dev
-Your branch is up to date with 'origin/module-1-dev'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   powershell-session.log
-
-no changes added to commit (use "git add" and/or "git commit -a")
-PS C:\Apps\Ludilearn> git push
-Everything up-to-date
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> git checkout module-1-dev
-M       powershell-session.log
-Already on 'module-1-dev'
-Your branch is up to date with 'origin/module-1-dev'.
-PS C:\Apps\Ludilearn> git fetch origin
-remote: Enumerating objects: 38, done.
-remote: Counting objects: 100% (38/38), done.
-remote: Compressing objects: 100% (28/28), done.
-remote: Total 38 (delta 5), reused 38 (delta 5), pack-reused 0 (from 0)
-Unpacking objects: 100% (38/38), 27.47 KiB | 439.00 KiB/s, done.
-From https://github.com/ludilearn2025/ludilearn
- * [new branch]      main       -> origin/main
-PS C:\Apps\Ludilearn> git reset --hard origin/module-1
-
-PS C:\Apps\Ludilearn> git push -u origin module-1-dev --force
-
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> # ignorer le log dans les branches de code
-PS C:\Apps\Ludilearn> Add-Content .gitignore "`r`npowershell-session.log"
-PS C:\Apps\Ludilearn> git add .gitignore
-
-PS C:\Apps\Ludilearn> git commit -m "chore: ignore transcript in code branches"
-
-PS C:\Apps\Ludilearn> git push
-
-PS C:\Apps\Ludilearn> # créer une branche orpheline dédiée aux logs
-PS C:\Apps\Ludilearn> git switch --orphan logs
-
-PS C:\Apps\Ludilearn> git rm -rf . 2>$null
-git : fatal: pathspec '.' did not match any files
-Au caractère Ligne:1 : 1
-+ git rm -rf . 2>$null
-+ ~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+Transcription arrêtée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+git.exe : error: unable to unlink old 'powershell-session.log': Invalid argument
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:25 : 5
++     & git switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: unable t...nvalid argument:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
-
-PS C:\Apps\Ludilearn> Copy-Item C:\Apps\Ludilearn\powershell-session.log . -Force
-Copy-Item : Impossible de remplacer l’élément C:\Apps\Ludilearn\powershell-session.log par lui-même.
-Au caractère Ligne:1 : 1
-+ Copy-Item C:\Apps\Ludilearn\powershell-session.log . -Force
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : WriteError: (C:\Apps\Ludilearn\powershell-session.log:String) [Copy-Item], IOException
-    + FullyQualifiedErrorId : CopyError,Microsoft.PowerShell.Commands.CopyItemCommand
-Copy-Item : Impossible de remplacer l’élément C:\Apps\Ludilearn\powershell-session.log par lui-même.
-Au caractère Ligne:1 : 1
-+ Copy-Item C:\Apps\Ludilearn\powershell-session.log . -Force
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : WriteError: (C:\Apps\Ludilearn\powershell-session.log:String) [Copy-Item], IOException
-    + FullyQualifiedErrorId : CopyError,Microsoft.PowerShell.Commands.CopyItemCommand
-
-PS C:\Apps\Ludilearn> git add powershell-session.log
-
-PS C:\Apps\Ludilearn> git commit -m "chore: session log"
-
-PS C:\Apps\Ludilearn> git push -u origin logs
-
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> cd .\module-1\
-PS C:\Apps\Ludilearn\module-1> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> mkdir .github\workflows -Force
-
-
-    Répertoire : C:\Apps\Ludilearn\.github
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----        23.08.2025     16:37                workflows
-
-
-PS C:\Apps\Ludilearn> @'
-name: CI
-on:
-  pull_request:
-    branches: [ "module-1" ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: module-1
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm run build
-'@ | Out-File -Encoding utf8 .github\workflows\ci.yml
-PS C:\Apps\Ludilearn> git add .github/workflows/ci.yml
-warning: in the working copy of '.github/workflows/ci.yml', LF will be replaced by CRLF the next time Git touches it
-PS C:\Apps\Ludilearn> git commit -m "ci(module-1): add build workflow"
-[logs e9eb36c] ci(module-1): add build workflow
- 1 file changed, 17 insertions(+)
- create mode 100644 .github/workflows/ci.yml
-PS C:\Apps\Ludilearn> git push
-
-PS C:\Apps\Ludilearn> cd C:\Apps\Ludilearn
-PS C:\Apps\Ludilearn> mkdir .github\workflows -Force
-
-
-    Répertoire : C:\Apps\Ludilearn\.github
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----        23.08.2025     16:37                workflows
-
-
-PS C:\Apps\Ludilearn> @'
-name: CI
-on:
-  pull_request:
-    branches: [ "module-1" ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: module-1
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm run build
-'@ | Out-File -Encoding utf8 .github\workflows\ci.yml
-PS C:\Apps\Ludilearn> git add .github/workflows/ci.yml
-
-PS C:\Apps\Ludilearn> git commit -m "ci(module-1): add build workflow"
-
-PS C:\Apps\Ludilearn> git push
-
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> git checkout module-1-dev
-error: Your local changes to the following files would be overwritten by checkout:
-        powershell-session.log
-Please commit your changes or stash them before you switch branches.
-Aborting
-PS C:\Apps\Ludilearn> git checkout logs -- .github/workflows/ci.yml
-
-PS C:\Apps\Ludilearn> git add .github/workflows/ci.yml
-
-PS C:\Apps\Ludilearn> git commit -m "ci(module-1): add build workflow"
-On branch logs
-Your branch is up to date with 'origin/logs'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   powershell-session.log
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        module-1/
-        module-2/
-        module-3/
-
-no changes added to commit (use "git add" and/or "git commit -a")
-PS C:\Apps\Ludilearn> git push
-Everything up-to-date
-PS C:\Apps\Ludilearn> notepad $PROFILE
-PS C:\Apps\Ludilearn> notepad $PROFILE
-PS C:\Apps\Ludilearn> notepad $PROFILE
-PS C:\Apps\Ludilearn> . $PROFILE
-. : Le terme «C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1» n'est pas reconnu comme nom 
-d'applet de commande, fonction, fichier de script ou programme exécutable. Vérifiez l'orthographe du nom, ou si un 
-chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.
-Au caractère Ligne:1 : 3
-+ . $PROFILE
-+   ~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (C:\Users\johnd\...ell_profile.ps1:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-. : Le terme «C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1» n'est pas reconnu comme nom d'applet de
-commande, fonction, fichier de script ou programme exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que
-le chemin d'accès est correct et réessayez.
-Au caractère Ligne:1 : 3
-+ . $PROFILE
-+   ~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (C:\Users\johnd\...ell_profile.ps1:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
-PS C:\Apps\Ludilearn> notepad $PROFILE
-PS C:\Apps\Ludilearn> $PROFILE
-C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-PS C:\Apps\Ludilearn> Test-Path $PROFILE
-False
-PS C:\Apps\Ludilearn> New-Item -ItemType File -Path $PROFILE -Force | Out-Null
-PS C:\Apps\Ludilearn> notepad $PROFILE
-PS C:\Apps\Ludilearn> . $PROFILE
-PS C:\Apps\Ludilearn> lg "npm run build"lg "npm run build"
-
-**********************
-Fin de la transcription Windows PowerShell
-Heure de fin : 20250823164908
-**********************
+Switched to branch 'logs'
