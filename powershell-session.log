@@ -12273,3 +12273,9 @@ PS C:\Apps\Ludilearn-logs> git commit -m "chore(log): init" 2>$null
 
 PS C:\Apps\Ludilearn-logs> git push
 
+PS C:\Apps\Ludilearn-logs> # optionnel: stop transcript si actif
+PS C:\Apps\Ludilearn-logs> Stop-Transcript 2>$null
+**********************
+Fin de la transcription Windows PowerShell
+Heure de fin : 20250823173421
+**********************
