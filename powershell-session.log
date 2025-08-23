@@ -1,12 +1,12 @@
 ﻿**********************
 Début de la transcription Windows PowerShell
-Heure de début : 20250823174833
+Heure de début : 20250823175408
 Nom d'utilisateur : STATION_PERREK\johnd
 Utilisateur runAs :  STATION_PERREK\johnd
 Nom de la configuration : 
 Ordinateur : STATION_PERREK (Microsoft Windows NT 10.0.26100.0)
-Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
-ID de processus : 23612
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit -NoLogo -Command Set-Location C:\Apps\Ludilearn; Stop-Transcript 2>$null; Start-Transcript -Path C:\Apps\Ludilearn\powershell-session.log -Force
+ID de processus : 13600
 PSVersion: 5.1.26100.4768
 PSEdition: Desktop
 PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.4768
@@ -17,10 +17,3 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
-PS C:\Apps\Ludilearn> echo "Vérification écriture log"
-Vérification écriture log
-PS C:\Apps\Ludilearn> Stop-Transcript
-**********************
-Fin de la transcription Windows PowerShell
-Heure de fin : 20250823174833
-**********************
