@@ -4947,3 +4947,27 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
 +     ~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
+Move-Item : Impossible de créer un fichier déjà existant.
+
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:29 : 5
++     Move-Item (Join-Path $global:LLRepo "pslog.tmp") $global:LLLog -F ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Apps\Ludilearn\powershell-session.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+[logs d038dbc] chore(log): auto-push 2025-08-23T17:18:18
+ 1 file changed, 24 insertions(+)
+git.exe : To https://github.com/ludilearn2025/ludilearn.git
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:33 : 5
++     & git push *> $null
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (To https://gith...5/ludilearn.git:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+   66680c4..d038dbc  logs -> logs
+Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+Transcription arrêtée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+git.exe : Already on 'logs'
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:25 : 5
++     & git switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
