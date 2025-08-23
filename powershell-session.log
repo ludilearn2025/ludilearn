@@ -144,3 +144,37 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
     + CategoryInfo          : NotSpecified: (error: unable t...nvalid argument:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
 Switched to branch 'logs'
+Move-Item : Impossible de créer un fichier déjà existant.
+
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:29 : 5
++     Move-Item (Join-Path $global:LLRepo "pslog.tmp") $global:LLLog -F ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Apps\Ludilearn\powershell-session.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+[logs 394c24d] chore(log): auto-push 2025-08-23T17:16:28
+ 1 file changed, 92 insertions(+), 400 deletions(-)
+git.exe : To https://github.com/ludilearn2025/ludilearn.git
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:33 : 5
++     & git push *> $null
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (To https://gith...5/ludilearn.git:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+   8930838..394c24d  logs -> logs
+git.exe : error: Your local changes to the following files would be overwritten by checkout:
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:35 : 50
++ ... anch -and $curBranch -ne "logs") { & git switch $curBranch *> $null }
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: Your loc...en by checkout::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+	powershell-session.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+PS C:\Apps\Ludilearn\module-1>
+Transcription arrêtée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+git.exe : Already on 'logs'
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:25 : 5
++     & git switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
