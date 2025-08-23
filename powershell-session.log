@@ -30,3 +30,20 @@ SerializationVersion: 1.1.0.1
 Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
 PS C:\Apps\Ludilearn> echo "OK transcript"
 OK transcript
+PS C:\Apps\Ludilearn> plop
+plop : Le terme «plop» n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme 
+exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct 
+et réessayez.
+Au caractère Ligne:1 : 1
++ plop
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (plop:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+plop : Le terme «plop» n'est pas reconnu comme nom d'applet de commande, fonction, fichier de script ou programme exécutable. Vérifiez
+l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.
+Au caractère Ligne:1 : 1
++ plop
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (plop:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
