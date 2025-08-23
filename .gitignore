@@ -8,3 +8,5 @@ yarn-error.log*
 .env
 .env.*
 /prisma/dev.db
+
+powershell-session.log
