@@ -1,0 +1,42 @@
+﻿name: Dev Status
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Update STATUS.md
+        run: |
+          mkdir -p dev
+          echo "# Dev Status" > dev/STATUS.md
+          echo "" >> dev/STATUS.md
+          echo "## Dernier commit" >> dev/STATUS.md
+          git log -1 --pretty=format:"- %h %s (%an, %ar)" >> dev/STATUS.md
+          echo "" >> dev/STATUS.md
+          echo "## CI & Tests" >> dev/STATUS.md
+          echo "- non implemente pour l'instant" >> dev/STATUS.md
+          echo "" >> dev/STATUS.md
+          echo "## Fichiers modifies (dernier commit)" >> dev/STATUS.md
+          git diff-tree --no-commit-id --name-only -r HEAD >> dev/STATUS.md
+          echo "" >> dev/STATUS.md
+          echo "---" >> dev/STATUS.md
+          echo "Notes rapides :" >> dev/STATUS.md
+          echo "- ..." >> dev/STATUS.md
+
+      - name: Commit STATUS.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dev/STATUS.md
+          git commit -m "chore(dev): auto-update STATUS.md [skip ci]" || echo "No changes"
+          git push
