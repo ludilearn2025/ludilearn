@@ -1,12 +1,12 @@
 # Dev Status
 
 ## Dernier commit
-- d6cfa38 ci: enable manual dispatch + schedule (ludilearn2025, 3 minutes ago)
+- b3386f7 chore(ci): trigger Dev Status now (ludilearn2025, 2 minutes ago)
 ## CI & Tests
-- non implemente pour l'instant
+- ✅ npm ci OK
+- ❌ npm test a échoué
 
-## Fichiers modifies (dernier commit)
-.github/workflows/dev-status.yml
+## Fichiers modifiés (dernier commit)
 
 ---
 Notes rapides :
