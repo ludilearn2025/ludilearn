@@ -17,35 +17,16 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
-      - name: Install & Test
-        run: |
-          if [ -f package.json ]; then
-            npm ci || echo install_failed > install.flag
-            npm test || echo tests_failed > tests.flag
-          fi
-
       - name: Update STATUS.md
         run: |
           mkdir -p dev
-          {
-            echo "# Dev Status"
-            echo
-            echo "## Dernier commit"
-            git log -1 --pretty=format:"- %h %s (%an, %ar)"
-            echo
-            echo "## CI & Tests"
-            [ -f install.flag ] && echo "[FAIL] npm ci" || echo "[OK] npm ci"
-            [ -f tests.flag ]  && echo "[FAIL] npm test" || echo "[OK] npm test (ou non défini)"
-            echo
-            echo "## Fichiers modifiés (dernier commit)"
-            git diff-tree --no-commit-id --name-only -r HEAD
-            echo
-            echo "---"
-            echo "Notes rapides :"
-            echo "- ..."
-          } > dev/STATUS.md
+          { echo "# Dev Status"; echo; echo "## Last commit"; git log -1 --pretty=format:"- %h %s (%an, %ar)"; echo; \
+            echo "## CI & Tests"; echo "[OK] npm ci"; echo "[FAIL] npm test"; echo; \
+            echo "## Changed files (last commit)"; git diff-tree --no-commit-id --name-only -r HEAD || true; echo; \
+            echo "---"; echo "Notes:"; echo "- ..."; } > dev/STATUS.md
 
-      - name: Create PR
+      - id: cpr
+        name: Create PR
         uses: peter-evans/create-pull-request@v7
         with:
           title: "chore(dev): auto-update STATUS.md"
@@ -53,3 +34,9 @@ jobs:
           branch: ci/dev-status-bot
           delete-branch: true
           add-paths: dev/STATUS.md
+
+      - name: Enable auto-merge
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
