@@ -12119,3 +12119,28 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
+PS C:\Apps\Ludilearn> dir
+
+
+    Répertoire : C:\Apps\Ludilearn
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        23.08.2025     17:16                .github
+d-----        23.08.2025     17:02                module-1
+d-----        23.08.2025     16:28                module-2
+d-----        23.08.2025     16:28                module-3
+-a----        23.08.2025     16:46            595 function lg {.txt
+-a----        23.08.2025     17:23        1250888 powershell-session.log
+-a----        23.08.2025     17:19        1083373 pslog.tmp
+
+
+PS C:\Apps\Ludilearn> plog
+git : Already on 'logs'
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:14 : 5
++     git -C $global:LLLogsRepo switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
