@@ -1,10 +1,10 @@
 # Dev Status
 
 ## Dernier commit
-- 3b65b04 Merge pull request #2 from ludilearn2025/ci/dev-status-bot (ludilearn2025, 70 seconds ago)
+- c852a5e Merge pull request #3 from ludilearn2025/ci/dev-status-bot (ludilearn2025, 64 seconds ago)
 ## CI & Tests
-- ✅ npm ci OK
-- ❌ npm test a échoué
+[OK] npm ci
+[FAIL] npm test
 
 ## Fichiers modifiés (dernier commit)
 
