@@ -1,6 +1,6 @@
 ﻿**********************
 Début de la transcription Windows PowerShell
-Heure de début : 20250823174520
+Heure de début : 20250823174833
 Nom d'utilisateur : STATION_PERREK\johnd
 Utilisateur runAs :  STATION_PERREK\johnd
 Nom de la configuration : 
@@ -16,26 +16,11 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-Transcription démarrée, le fichier de sortie est .\powershell-session.log
-PS C:\Apps\Ludilearn> echo "TEST transcription OK"
-TEST transcription OK
-PS C:\Apps\Ludilearn> Get-Content .\powershell-session.log -Tail 5
-SerializationVersion: 1.1.0.1
+Transcription démarrée, le fichier de sortie est C:\Apps\Ludilearn\powershell-session.log
+PS C:\Apps\Ludilearn> echo "Vérification écriture log"
+Vérification écriture log
+PS C:\Apps\Ludilearn> Stop-Transcript
 **********************
-Transcription démarrée, le fichier de sortie est .\powershell-session.log
-PS C:\Apps\Ludilearn> echo "TEST transcription OK"
-TEST transcription OK
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> Write-Output "Nouvelle ligne de test"
-Nouvelle ligne de test
-PS C:\Apps\Ludilearn> Get-Content .\powershell-session.log -Tail 10
-TEST transcription OK
-PS C:\Apps\Ludilearn> Get-Content .\powershell-session.log -Tail 5
-SerializationVersion: 1.1.0.1
+Fin de la transcription Windows PowerShell
+Heure de fin : 20250823174833
 **********************
-Transcription démarrée, le fichier de sortie est .\powershell-session.log
-PS C:\Apps\Ludilearn> echo "TEST transcription OK"
-TEST transcription OK
-PS C:\Apps\Ludilearn> clear
-PS C:\Apps\Ludilearn> Write-Output "Nouvelle ligne de test"
-Nouvelle ligne de test
