@@ -4,50 +4,52 @@ on:
     branches: ["main"]
   workflow_dispatch: {}
   schedule:
-    - cron: "*/30 * * * *"   # toutes les 30 min
+    - cron: "*/30 * * * *"
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   status:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
 
       - name: Install & Test
         run: |
           if [ -f package.json ]; then
-            npm ci || echo "install_failed" > install.flag
-            npm test || echo "tests_failed" > tests.flag
+            npm ci || echo install_failed > install.flag
+            npm test || echo tests_failed > tests.flag
           fi
 
       - name: Update STATUS.md
         run: |
           mkdir -p dev
-          echo "# Dev Status" > dev/STATUS.md
-          echo "" >> dev/STATUS.md
-          echo "## Dernier commit" >> dev/STATUS.md
-          git log -1 --pretty=format:"- %h %s (%an, %ar)" >> dev/STATUS.md
-          echo "" >> dev/STATUS.md
-          echo "## CI & Tests" >> dev/STATUS.md
-          if [ -f install.flag ]; then echo "- ❌ npm ci a échoué" >> dev/STATUS.md; else echo "- ✅ npm ci OK" >> dev/STATUS.md; fi
-          if [ -f tests.flag ];  then echo "- ❌ npm test a échoué" >> dev/STATUS.md; else echo "- ✅ npm test OK (ou non défini)" >> dev/STATUS.md; fi
-          echo "" >> dev/STATUS.md
-          echo "## Fichiers modifiés (dernier commit)" >> dev/STATUS.md
-          git diff-tree --no-commit-id --name-only -r HEAD >> dev/STATUS.md
-          echo "" >> dev/STATUS.md
-          echo "---" >> dev/STATUS.md
-          echo "Notes rapides :" >> dev/STATUS.md
-          echo "- ..." >> dev/STATUS.md
+          {
+            echo "# Dev Status"
+            echo
+            echo "## Dernier commit"
+            git log -1 --pretty=format:"- %h %s (%an, %ar)"
+            echo
+            echo "## CI & Tests"
+            [ -f install.flag ] && echo "- ❌ npm ci a échoué" || echo "- ✅ npm ci OK"
+            [ -f tests.flag ]  && echo "- ❌ npm test a échoué" || echo "- ✅ npm test OK (ou non défini)"
+            echo
+            echo "## Fichiers modifiés (dernier commit)"
+            git diff-tree --no-commit-id --name-only -r HEAD
+            echo
+            echo "---"
+            echo "Notes rapides :"
+            echo "- ..."
+          } > dev/STATUS.md
 
-      - name: Commit STATUS.md
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dev/STATUS.md
-          git commit -m "chore(dev): auto-update STATUS.md [skip ci]" || echo "No changes"
-          git push
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: "chore(dev): auto-update STATUS.md"
+          commit-message: "chore(dev): auto-update STATUS.md [skip ci]"
+          branch: ci/dev-status-bot
+          delete-branch: true
+          add-paths: dev/STATUS.md
