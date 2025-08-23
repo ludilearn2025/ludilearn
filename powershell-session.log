@@ -1,1 +1,19 @@
-﻿
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20250823174520
+Nom d'utilisateur : STATION_PERREK\johnd
+Utilisateur runAs :  STATION_PERREK\johnd
+Nom de la configuration : 
+Ordinateur : STATION_PERREK (Microsoft Windows NT 10.0.26100.0)
+Application hôte : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+ID de processus : 23612
+PSVersion: 5.1.26100.4768
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.4768
+BuildVersion: 10.0.26100.4768
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcription démarrée, le fichier de sortie est .\powershell-session.log
