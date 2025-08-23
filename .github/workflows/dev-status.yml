@@ -34,8 +34,8 @@ jobs:
             git log -1 --pretty=format:"- %h %s (%an, %ar)"
             echo
             echo "## CI & Tests"
-            [ -f install.flag ] && echo "- ❌ npm ci a échoué" || echo "- ✅ npm ci OK"
-            [ -f tests.flag ]  && echo "- ❌ npm test a échoué" || echo "- ✅ npm test OK (ou non défini)"
+            [ -f install.flag ] && echo "[FAIL] npm ci" || echo "[OK] npm ci"
+            [ -f tests.flag ]  && echo "[FAIL] npm test" || echo "[OK] npm test (ou non défini)"
             echo
             echo "## Fichiers modifiés (dernier commit)"
             git diff-tree --no-commit-id --name-only -r HEAD
