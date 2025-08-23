@@ -12147,3 +12147,11 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
 
 
 
+PS C:\Apps\Ludilearn> plog
+git : Already on 'logs'
+Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:14 : 5
++     git -C $global:LLLogsRepo switch logs *> $null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Already on 'logs':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
