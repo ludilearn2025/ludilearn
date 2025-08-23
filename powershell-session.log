@@ -12234,3 +12234,4 @@ Au caractère C:\Users\johnd\Documents\WindowsPowerShell\Microsoft.PowerShell_pr
 
 
 PS C:\Apps\Ludilearn> notepad $PROFILE
+PS C:\Apps\Ludilearn> lg "npm run build"
