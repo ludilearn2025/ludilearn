@@ -1,7 +1,7 @@
 # Dev Status
 
 ## Last commit
-- 8c98f3d chore(dev): auto-update STATUS.md [skip ci] (#297) (github-actions[bot], 76 minutes ago)
+- 0bd0700 chore(dev): auto-update STATUS.md [skip ci] (#298) (github-actions[bot], 39 minutes ago)
 ## CI & Tests
 [OK] npm ci
 [FAIL] npm test
