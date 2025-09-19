@@ -1,7 +1,7 @@
 # Dev Status
 
 ## Last commit
-- ccbdd5b chore(dev): auto-update STATUS.md [skip ci] (#727) (github-actions[bot], 64 minutes ago)
+- 40387a5 chore(dev): auto-update STATUS.md [skip ci] (#728) (github-actions[bot], 38 minutes ago)
 ## CI & Tests
 [OK] npm ci
 [FAIL] npm test
